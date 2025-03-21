@@ -1,0 +1,26 @@
+RPC Based Server for File Operations
+
+Server Setup:
+- Run: `python3 server.py`
+- Default Port: 8000
+
+Client Setup:
+- Run: `python3 client.py`
+
+File Operations:
+
+Upload:
+- Command: `python3 client.py --upload <filename>`
+- Example: `python3 client.py --upload client_1.txt`
+
+Delete:
+- Command: `python3 client.py --delete <filename>`
+- Example: `python3 client.py --delete server_22.txt`
+
+Download:
+- Command: `python3 client.py --download <filename>`
+- Example: `python3 client.py --download server_2s.txt`
+
+Rename:
+- Command: `python3 client.py --rename <actualFileName> --renameTo <changeToFileName>`
+- Example: `python3 client.py --rename server_3.txt --renameTo server_4.txt`

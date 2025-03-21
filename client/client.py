@@ -43,13 +43,5 @@ if __name__ == '__main__':
     elif(parsedArgs.deleteFile != "none" ):
         proxy.delete_file(parsedArgs.deleteFile)
 
-    elif(len(parsedArgs.add) > 0):
-       
-        sumVal = proxy.add(parsedArgs.add[0],parsedArgs.add[1])
-        print("[Client] Sum from server is : ", sumVal)
-    
-    elif(len(parsedArgs.sort) > 0):
-        arr = proxy.sort_array(parsedArgs.sort)
-        print("[Client] Sorted Array from server is : ", arr)
     else:
         print("Enter any Arguments")

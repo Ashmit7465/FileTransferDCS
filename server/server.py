@@ -48,9 +48,6 @@ def delete_file(file_name):
 def rename_file(old_file_name, new_file_name):
     os.rename(old_file_name, new_file_name)
     return True
-def sort_array(arr):
-    arr.sort()
-    return arr
 
 
 class RequestHandler(SimpleXMLRPCRequestHandler):
@@ -62,8 +59,6 @@ class ServerThread(threading.Thread):
         self.localServer = xmlrpc.server.SimpleXMLRPCServer(("localhost",8000),requestHandler=RequestHandler,
                             allow_none=True)
         self.localServer.register_multicall_functions()
-        self.localServer.register_function(add,'add') #just return a string
-        self.localServer.register_function(sort_array,'sort_array') #just return a string
         self.localServer.register_function(upload_file,'upload_file') #just return a string
         self.localServer.register_function(download_file,'download_file') #just return a string
         self.localServer.register_function(delete_file,'delete_file') #just return a string
